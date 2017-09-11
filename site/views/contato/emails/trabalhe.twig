@@ -1,0 +1,62 @@
+{% extends "layout-email.twig" %}
+{% block content %}
+	<table align="center" width="600px">
+		<tr>
+			<td align="left">
+				<p><a href="{{ req.base_url }}"><img src="{{ base_url }}static/images/logo.png" /></a></p>
+
+				<table width="100%" border="1" style="border: 1px solid black;border-collapse: collapse;">
+					<tr>
+						<td align="right" style="width:50%;" width="50%"><strong>Nome</strong></td>
+						<td>{{ trabalhe.nome }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>CPF</strong></td>
+						<td>{{ trabalhe.cpf }}</td>
+					</tr>
+					{% if trabalhe.telefone != ''%}
+						<tr>
+							<td align="right"><strong>Telefone</strong></td>
+							<td>{{ trabalhe.telefone }}</td>
+						</tr>
+					{% endif %}
+					<tr>
+						<td align="right"><strong>E-mail</strong></td>
+						<td>{{ trabalhe.email }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>CEP</strong></td>
+						<td>{{ trabalhe.cep }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>Endereço</strong></td>
+						<td>{{ trabalhe.endereco }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>Número</strong></td>
+						<td>{{ trabalhe.numero }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>Complemento</strong></td>
+						<td>{{ trabalhe.complemento }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>Cidade</strong></td>
+						<td>{{ trabalhe.cidade }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>Estado</strong></td>
+						<td>{{ trabalhe.estado }}</td>
+					</tr>
+					
+					
+					<tr>
+						<td align="right"><strong>Currículo</strong></td>
+						<td><a href="{{ req.base_url }}view/download/{{ arquivo.path }}">{{ arquivo.legenda }}</a></td>
+					</tr>
+				</table>			
+
+			</td>
+		</tr>
+	</table>
+{% endblock %}

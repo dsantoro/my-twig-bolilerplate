@@ -1,0 +1,15 @@
+{% if req.controller  == 'home' %}
+	{% set popup = cms.popup | where("ativo=1") | where("inicio <= date(now())") | where("fim >= date(now())") | sortby("rand()") | limit(1) | first %}
+	{% if popup %}
+		{% if popup.nova == 1 %}
+			{% set _target = "target='_blank'" %}
+		{% else %}
+			{% set _target = "" %}
+		{% endif %}
+		<div style='display:none;'>
+			<div id='flyer'>
+				<a {{ popup.url() }} {{ _target }} ><img src='view/resize/900x1000/{{ popup.imagem }}' border='0' alt='' /></a>
+			</div>
+		</div>
+	{% endif %}
+{% endif %}

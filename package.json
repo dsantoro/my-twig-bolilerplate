@@ -1,0 +1,13 @@
+{
+  "name": "modelo-abril-2017",
+  "version": "1.0.0",
+  "description": "Modelo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:watch": "onchange site/static/css/*.less -v -- npm run css",
+    "css" : "lessc --plugin=less-plugin-clean-css=\"--advanced --s0\" --source-map  site/static/css/style.less site/static/css/style.css"
+  },
+  "author": "StudioGT",
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "amd": {},
+  "volo": {
+    "baseUrl": "js/lib",
+    "dependencies": {
+      "jquery": "github:jquery/jquery/2.2.3",
+      "underscore": "github:jashkenas/underscore/1.8.3",
+      "backbone": "github:jashkenas/backbone/1.3.3",
+      "text": "github:requirejs/text/2.0.15"
+    }
+  }
+}

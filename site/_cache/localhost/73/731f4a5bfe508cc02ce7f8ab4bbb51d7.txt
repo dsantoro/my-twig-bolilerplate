@@ -1,0 +1,67 @@
+a:5:{s:5:"value";O:8:"stdClass":3:{s:7:"content";s:1505:"<html>
+	<head>
+		<base href="http://localhost/modelo/teste/br/" />
+		<meta charset='utf-8' />
+		<title>Teste</title>
+		<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+	</head>
+	<body>
+		
+			03/06/2016 11:40:24
+
+			<p>Opçoes</p>
+			<p>Personalize</p>
+			<p>Opçoes</p>
+			<p>Reservas</p>
+			<p>Itens Reserva / Personalização</p>
+			<p>Reservas/Personalização</p>
+			<p>Reserva Texto</p>
+			<p>Banners Laterais</p>
+			<p>Tarifas/Pacotes</p>
+			<p>Política de Cancelamento</p>
+			<p>Pedidos</p>
+			<p>Sem Imagem</p>
+			<p>Adulto Adicional</p>
+			<p>Exceções Restrições de Reserva Única</p>
+			<p>Cielo</p>
+			<p>Adicionais</p>
+			<p>Disponibilidade</p>
+			<p>Reservas</p>
+			<p>Extras</p>
+			<p>Pacotes</p>
+			<p>Restrições de Reserva Única</p>
+			<p>Descontos Exceções</p>
+			<p>Descontos Padrão</p>
+			<p>Valores Exceções</p>
+			<p>Valores Padrão</p>
+			<p>Padrões de Cabana</p>
+			<p>Motor de Reservas</p>
+			<p>Pacotes Lua de Mel</p>
+			<p>Notícias</p>
+			<p>Cabanas</p>
+			<p>Premios</p>
+			<p>Parceiros</p>
+			<p>A Pousada</p>
+			<p>Páginas</p>
+			<p>Seção</p>
+			<p>Usuários</p>
+			<p>Dados de contato</p>
+			<p>Contatos</p>
+			<p>Contato</p>
+			<p>Banner Landing Page</p>
+			<p>Capa</p>
+			<p>Popup</p>
+			<p>Home</p>
+			<p>Idiomas</p>
+			<p>Traduções</p>
+			<p>Metas</p>
+			<p>Configurações</p>
+			<p>Campos</p>
+			<p>Tipos</p>
+			<p>Submodulo</p>
+			<p>Galerias</p>
+			<p>Galerias de Video</p>
+			<p>Módulos</p>
+			<p>Admin</p>
+		</body>
+</html>";s:7:"headers";a:4:{s:7:"X-Cache";s:4:"miss";s:14:"Content-Length";i:1505;s:16:"Content-Encoding";s:4:"none";s:10:"Connection";s:5:"close";}s:7:"cookies";a:0:{}}s:10:"write_time";i:1464964825;s:10:"expired_in";i:300;s:12:"expired_time";i:1464965125;s:4:"size";i:1707;}

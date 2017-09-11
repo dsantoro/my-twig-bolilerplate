@@ -1,0 +1,23 @@
+<html>
+	<head>
+		{% include 'includes/meta-tags.twig' %}
+	</head>
+	
+	<body class="{{ req.controller }} {{ req.method }} {{ req.params | join(' ') }}">
+		
+		<div class="page-wrap">
+
+			{% block header %}
+				{% include 'includes/header.twig' %}
+			{% endblock %}
+			
+			{% block content %}{% endblock %}
+
+		</div>
+
+		{% include 'includes/footer.twig' %}
+		
+		{% include 'includes/scripts.twig' %}
+		{% block extraScripts %}{% endblock %}
+	</body>
+</html>

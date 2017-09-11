@@ -1,0 +1,13 @@
+{% if pages > 1 %}
+<ul class="pagination clearfix" role="navigation">
+	
+	{% set pagination = getPagination(req.path_info,pages,req.Get('page'),5) %}
+<li><a {{ pagination.prev ? "href=#{pagination.prev.url}":'class=disable' }} >anterior</a></li>
+	
+	{% for page in pagination.pages %}
+		<li><a {% if page.active == true %}class="current"{% endif %} href="{{ page.url }}">{{ page.title | raw }}</a></li>
+	{% endfor %}
+<li><a {{ pagination.next ? "href=#{pagination.next.url}":'class=disable' }}>próximo</a></li>
+
+</ul>
+{% endif %}

@@ -1,0 +1,82 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+	<section class="hero">
+		
+		<div class="row flex align-center">
+			
+			<div class="small-12 medium-9 large-10 columns">
+				
+				<h2 class="title">Contato</h2>
+			</div>
+			<div class="small-12 medium-3 large-2 columns">
+				
+				<img src="static/images/selo-pampa.png" alt="Desenvolvido, testado e aprovado. Pampa Gaúcho." title="Desenvolvido, testado e aprovado. Pampa Gaúcho." />
+			</div>
+		</div><!-- Fecha ROW -->
+	</section>
+
+	<section class="container">
+		
+		<div class="row">
+
+			<div class="small-12 columns">
+				
+				<p>Use o formulário abaixo ou, se preferir, envie um e-mail para: <br />
+				{% for destino in destinos %}
+					<a href="mailto:{{ destino.email }}">{{ destino.titulo }}: {{ destino.email }}</a><br />
+				{% endfor %}
+
+				<div class="row">
+					
+					<div class="small-12 medium-6 columns">
+						
+						<form name="formContato" action="contato/enviar" class="clearfix">
+							<input type='text' name='nome' value="" style="display:none;" />
+							
+							<label>Nome</label>
+							<input type="text" name="controle" required>
+
+							<label>E-mail</label>
+							<input type="text" name="email" required>
+
+							<div class="row">
+								
+								<div class="small-12 medium-6 columns">
+									
+									<label>Cidade</label>
+									<input type="text" name="cidade">
+								</div>
+								<div class="small-12 medium-6 columns">
+									
+									<label>Telefone</label>
+									<input type="text" name="telefone" alt="phone">
+								</div>
+							</div><!-- Fecha ROW -->
+
+							<label>Destino</label>
+							<select name="destino_id">
+								{% for destino in destinos %}
+									<option value="{{ destino.id }}">{{ destino.titulo }}</option>
+								{% endfor %}
+							</select>
+
+							<label>Mensagem</label>
+							<textarea name="mensagem"></textarea>
+
+							<button type="submit" style="margin: 0;" class="btn-simulacao effect float-right">Enviar mensagem &#9658;</button>
+						</form>
+					</div>
+					<div class="small-12 medium-6 columns">
+						
+						<div class="wrap-mapa">
+							
+							{{ req.InfoContato.mapa | raw }}
+						</div>
+					</div>
+				</div><!-- Fecha ROW -->
+			</div>
+		</div><!-- Fecha ROW -->
+	</section>
+{% endblock %}

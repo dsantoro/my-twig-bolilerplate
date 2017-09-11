@@ -1,0 +1,46 @@
+<base href="{{ req.base_url }}" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+{% if not meta %}
+	{% set meta = getMeta(req.uri) %}
+{% endif %}
+
+
+{% if not facebook %}
+	{% set facebook = {'title':meta.title,'description':meta.description,'url':[req.base_url,req.uri]|join(''),'image':[req.base_url,'static/img/logo.png']|join('')} %}    	
+{% endif %}
+
+<title>{{ meta.title  }}</title>
+<meta name="keywords" content="{{ meta.keywords }}" />
+<meta name="description" content="{{ meta.description }}" />
+<meta name="language" content="{{ req.language }}" />
+<meta name="author" content="STUDIOGT - Desenvolvimento de sites - www.studiogt.com.br" />
+<meta name="copyright" content="" />
+<meta name="resource-type" content="" />
+<meta name="distribution" content="" />
+<meta name="doc-class" content="Completed" />
+<meta name="revisit-after" content="7 Days" />
+<meta name="robots" content="all" />
+<meta name="classification" content="" />
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+<link rel="shortcut icon" href="favicon.png?v=2" type="image/x-icon" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<!-- *****  APLICAR PARA FACEBOOK - IMAGEM 150X150 **** -->
+<meta property="og:title" content="{{ facebook.title }}" />
+<meta property="og:description" content="{{ facebook.description }}" />
+<meta property="og:url" content="{{ facebook.url }}" />
+<meta property="og:image" content="{{ facebook.image }}" />
+
+<meta property="og:image:width" content="{{ facebook.image_width }}"/>
+<meta property="og:image:height" content="{{ facebook.image_height }}"/>   
+
+<!-- CSS -->
+<link rel="stylesheet" href="static/css/foundation.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+
+{% include 'includes/urchin.twig' %}

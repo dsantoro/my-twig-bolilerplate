@@ -1,0 +1,42 @@
+{% extends "layout-email.twig" %}
+{% block content %}
+	<table align="center" width="600px">
+		<tr>
+			<td align="left">
+				<p><a href="{{ req.base_url }}"><img src="{{ base_url }}static/images/logo.png" /></a></p>
+
+				<table width="100%" border="1" style="border: 1px solid black;border-collapse: collapse;">
+					<tr>
+						<td align="right" style="width:50%;" width="50%"><strong>Destino</strong></td>
+						<td>{{ destino }}</td>
+					</tr>
+					<tr>
+						<td align="right" style="width:50%;" width="50%"><strong>Nome</strong></td>
+						<td>{{ contato.nome }}</td>
+					</tr>
+					<tr>
+						<td align="right"><strong>E-mail</strong></td>
+						<td>{{ contato.email }}</td>
+					</tr>
+					{% if contato.cidade!='' %}
+						<tr>
+							<td align="right"><strong>Cidade</strong></td>
+							<td>{{ contato.cidade }}</td>
+						</tr>
+					{% endif %}
+					{% if contato.telefone!=''%}
+						<tr>
+							<td align="right"><strong>Telefone</strong></td>
+							<td>{{ contato.telefone }}</td>
+						</tr>
+					{% endif %}
+					<tr>
+						<td align="right" valign="top"><strong>Mensagem</strong></td>
+						<td valign="top">{{ contato.mensagem | nl2br | raw }}</td>
+					</tr>
+				</table>			
+
+			</td>
+		</tr>
+	</table>
+{% endblock %}

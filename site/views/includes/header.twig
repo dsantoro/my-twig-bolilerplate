@@ -1,0 +1,30 @@
+<header class="wrap-header show-for-large">
+</header>
+
+<!-- Mobile Header -->
+<header class="hide-for-large">
+		
+	<div class="mobile-menu">
+
+		<div class="row flex align-center">
+
+			<div class="small-2 columns">
+				<a href="javascript:void(0);" class="open-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			</div>
+
+			<div class="small-8 end columns">
+				{% include 'includes/logo.twig' %}
+			</div>
+		</div><!-- Fecha ROW -->
+
+		<div class="offset-menu hide-for-large-up">
+			<div class="clearfix">
+				<a href="javascript:void(0);" class="open-menu float-right"><i class="fa fa-times" aria-hidden="true"></i></a>
+			</div>
+			
+	        <ul class="clearfix">
+	            {% include 'includes/menu.twig' %}
+	        </ul>
+	    </div>
+	</div>
+</header>

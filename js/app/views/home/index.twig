@@ -1,0 +1,17 @@
+<form>
+	<label>
+		<input type="text" name="keywords" value="" placeholder="Search" required />
+	</label>
+	<button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<ul>
+	{% for playlist in playlists %}
+		<li>
+			<img src="{{ playlist.thumbnails.default.url }}" />
+			{{ playlist.title }}
+		</li>
+	{% endfor %}
+</ul>
+{% if pagination.pages > pagination.page %}
+	<button class="LoadMore">Mais</button>
+{% endif %}
